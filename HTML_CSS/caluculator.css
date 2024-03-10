@@ -1,0 +1,46 @@
+body{
+
+	background-color:orange;
+}
+
+#aqua{
+	width:380px;
+	background-color:aqua;
+	padding: 10px;
+	margin:auto;
+	margin-top:120px;
+}
+
+.main{
+	display:flex;	
+}
+
+.aqua1{
+	background-color:white;
+	padding:38px 39px;
+	margin:8px;
+}
+
+.aqua2{
+	padding: 30px 35px;
+	margin:7px;
+}
+
+.red{
+	background-color:red;
+}
+
+.yellow{
+	background-color:yellow;
+}
+
+.white{
+	background-color:white;
+}
+
+.space{
+	padding:30px 38px;
+}
+
+
+

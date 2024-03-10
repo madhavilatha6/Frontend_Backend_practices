@@ -1,0 +1,12 @@
+.navbar{
+  border: 2px solid #fc6a03;
+ height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fc6a03;
+  /* margin-top: 30px; */
+  color: white;
+  top: 0;
+  right: 0;
+position: relative;
+}

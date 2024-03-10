@@ -1,0 +1,48 @@
+
+
+body{
+    background-image: url(https://s1.1zoom.me/big0/398/331497-alexfas01.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+                        
+}
+
+
+
+
+.navbar{
+    border: 3px solid white;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+a{
+    text-decoration: none;
+}
+button{
+    padding: 15px;
+    margin: 10px;
+    margin-left: 600px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+ 
+.card{
+    border: 3px solid gray;
+    width: 1000px;
+    height: 70px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 100px;
+    color:aliceblue;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-lt_0wYuB6-yWIfVdwKA1UnPAaeY5ma3HwQ&usqp=CAU);
+    margin: 30px 180px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}

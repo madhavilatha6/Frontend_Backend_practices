@@ -1,0 +1,51 @@
+.container{
+	background-image: linear-gradient(to right, blue,purple,orange); 
+}
+
+
+.input{
+	margin: 20px 0px;
+}
+
+.center{
+	text-align: center;
+}
+
+.box{
+	
+	margin: 0 auto;
+	margin-top: 350px;
+	width: 280px;
+}
+
+.details{
+	width: 100%;
+	font-size: 20px;
+	outline: none;
+	background-color: rgba(0, 0, 0 , 0);
+	border: none;
+	border-bottom: 1px solid #FFF;
+	color: white;
+}
+
+
+
+.login{
+	background-color: rgba(0, 0, 0 , 0);
+	border :1px solid white;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 2px;
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: bold 
+}	
+
+.signup{
+	text-align: right;
+	color: white;
+}
+
+.white{
+	color:white;
+}

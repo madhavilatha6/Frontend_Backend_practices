@@ -1,0 +1,205 @@
+body{
+	font-family: 'Open Sans', sans-serif; ;
+
+}
+
+
+#nav-1{
+	border:5px solid #a5c926;
+	width:100%;
+	height:5%;
+	margin-top:-10px;
+	margin-left:-5px;
+	background-color:#a5c926;
+	display:flex;-homepage
+	position: fixed;
+	overflow: hidden;
+	 position: absolute;
+  	top: 0;
+  	  float: left;
+}
+
+
+
+#nav-1 > div{
+	margin:10px;
+	margin-left:40px;
+}
+
+.nav-logo img{
+	width:70px;
+	height:50px;
+	border-radius:50%;
+	margin-left:100px;
+}
+
+#nav-2{
+	justify-content: space-around;
+	width: 600px;
+	  height: 100px;
+	  display: flex;
+	  justify-content: space-between;
+	  margin-left:30px;
+	 margin-top:30px
+	 
+	 
+}
+
+#nav-2 > h3{
+	margin-top:28px;
+}
+
+
+.cart{
+	margin-left:90%;
+	margin-top:-68px;
+}
+
+
+.display{
+
+	display:flex;
+	margin:5px 0px;
+	padding:10px 20px;
+	justify-content:flex-end;
+	
+}
+
+.display > div{
+
+	padding:10px 30px;
+
+}
+
+.toys {
+	padding:5px 30px;
+
+}
+
+
+.boxes{
+
+	border:1px solid gray;
+	width:93%;
+	height:30px;
+	border-radius:30px;
+	display:flex;
+	padding:10px 20px;
+	margin-left:20px;
+
+
+}
+
+.boxes > div{
+
+	padding:10px;
+
+}
+
+
+.last-pictures{
+	
+	width:0%;
+	height:27%;
+	display:flex;
+	margin:10px 40px 0px 50px;
+
+
+}
+
+
+
+.image > img{
+	  
+	width:200px;
+	height:250px; 
+	padding:20px;
+	margin-left:-10px;
+	 border-radius: 30px;
+	 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+
+}
+
+.more{
+	width:200px;
+	height:50px;
+	background-color:#a5c926;
+	border-radius:20px;
+	margin:120px 30px 30px 600px;
+}
+ 
+ 
+ .footer1{
+ 	background-color:#a5c926;
+ 	width:100%;
+ 	height:35%;
+
+ 
+ }
+ 
+ 
+ .form-siri{
+	height:650px;
+	width:100%;
+	background-color:#a5c926;
+	margin-top:20px;
+}
+.form h1{
+	margin-left:300px;
+	margin-top:20px;
+	font-size:40px;
+	padding-top:70px;
+}
+.form h3{
+	margin-left:400px;
+	font-size:40px;
+	margin-top:5px;
+	color:#E6E6E3;
+	
+}
+.form hr{
+	margin-left:300px;
+	font-size:40px;
+	padding-top:-40px;
+	color:#E6E6E3;
+	width:200px;
+	
+}
+.form1{
+	display:flex;
+}
+.form1 input{
+	height:45px;
+	width:500px;
+	margin-left:10px;
+	margin-top:10px;
+	border-radius:5px;
+	text-align:left;
+	font-size:20px;
+	
+}
+#t{
+	margin-left:300px;
+	margin-top:10px;
+}
+#s{
+	margin-left:300px;
+	height:110px;
+	width:1010px;
+	border-radius:5px;
+	margin-top:10px;
+}
+button{
+	height:50px;
+	width:130px;
+	background-color:#2f4f4f ;
+	font-size:15px;
+	margin-left:400px;
+	margin-top:10px;
+	border-radius:5px;
+	color:white;
+	
+}
+
+
