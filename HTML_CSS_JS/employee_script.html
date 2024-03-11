@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title> Login Froms </title>
+	</head>
+	<style type="text/css">
+		#formLayout {
+			display : flex;
+			flex-direction : column;
+			width: 300px;
+			margin : auto;
+		}
+		input {
+			margin : 5px 0px;
+		}
+		
+		table{
+			border : 1px solid gray;
+		}
+		th{
+			border:1px solid gray;
+		}
+		#DisplayTableDetails table{
+			
+			margin : 10px auto;
+		}
+	</style>
+	<body>
+		<div id="formLayout">
+			<input class="employee" type="text" placeholder="Employee Name"/>
+			<input class="department" type="text" placeholder= "Department"/>
+			<input class="sales1" type="text" placeholder="Sales1"/>
+			<input class="sales2" type="text" placeholder= "Sales2"/>
+			<input class="submitButton" type="submit" value="submit"/>
+			
+		</div>
+		<div id="DisplayTableDetails">
+		</div>
+		
+	   
+	</body>
+	<script type="text/javascript">
+		let submitButton = document.querySelector(".submitButton");
+		//creating Table Heading
+		let CreateTable = document.createElement("table");
+		let tableRow = document.createElement("tr");
+		let tableHead = document.createElement("th");
+		tableHead.textContent = "Employee Name";
+		let tableHead1 = document.createElement("th");
+		tableHead1.textContent = " Department";
+		let tableHead2 = document.createElement("th");
+		tableHead2.textContent = "sales 1";
+		let tableHead3 = document.createElement("th");
+		tableHead3.textContent = "sales 2";
+		let tableData4 = document.createElement("th");
+		tableData4.textContent = "average";
+			
+		// appending all table head to the table row tag
+		tableRow.append(tableHead,tableHead1,tableHead2,tableHead3,tableData4);
+		console.log(tableRow);
+		//appending table row into the table
+		CreateTable.appendChild(tableRow);
+	
+	
+		//appending the table into the DisplayTableDetails
+		let DisplayTableDetails = document.querySelector("#DisplayTableDetails");
+		DisplayTableDetails.appendChild(CreateTable);
+		
+		
+		submitButton.onclick = function() {
+			let employeeName = document.querySelector(".employee").value;
+			let department = document.querySelector(".department").value;
+			let sales1 = Number(document.querySelector(".sales1").value);
+			let sales2 = Number(document.querySelector(".sales2").value);
+			
+			let average = (sales1 + sales2) / 2;
+			
+			
+			// appending the form information to the table
+			let tableRow = document.createElement("tr");
+			let tableData = document.createElement("td");
+			tableData.textContent = employeeName;
+			let tableData1 = document.createElement("td");
+			tableData1.textContent = department;
+			let tableData2 = document.createElement("td");
+			tableData2.textContent = sales1;
+			let tableData3 = document.createElement("td");
+			tableData3.textContent = sales2;
+			let tableData4 = document.createElement("td");
+			tableData4.textContent = average;
+			
+			
+			
+			
+			// appending all table head to the table row tag
+			tableRow.append(tableData,tableData1,tableData2,tableData3,tableData4);
+			CreateTable.appendChild(tableRow);
+			
+			
+			
+			//appending the table into the DisplayTableDetails
+			let DisplayTableDetails = document.querySelector("#DisplayTableDetails");
+			DisplayTableDetails.appendChild(CreateTable);
+			console.log(employeeName,department,sales1,sales2,average);
+		}
+		//Table Creation Function
+		function TableCreation() {
+			
+		}
+	</script>
+</html>

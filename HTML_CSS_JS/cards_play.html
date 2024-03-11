@@ -1,0 +1,68 @@
+
+<html>
+	<head>
+ 		 <title>Cards play</title>
+ 		 <style>
+			#cards {
+  				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+  				margin-top: 20px;
+			}
+
+			.card {
+				  width: 150px;
+				  height: 50px;
+				  background-color: aqua;
+				  border: 4px solid black;
+				  border-radius: 5px;
+				  display: flex;
+				  align-items: center;
+				  justify-content: center;
+				  font-size: 50px;
+				  margin-bottom: 20px;
+				  padding:30px 40px 35px 30px;
+			}
+			#heading{
+				text-align:center;
+			
+			}
+
+  
+ 		 </style>
+	</head>
+	
+	
+	<body>
+		  <h1 id="heading"> Cards play </h1>
+ 		 <button id="clickme"> Click me </button>
+  		 <div id="cards"></div>
+	</body>
+	
+	
+	<script>
+
+		var heading = document.querySelector('#heading');
+		var clickme = document.querySelector('#clickme');
+		var cards = document.querySelector('#cards');
+
+		clickme.addEventListener('click', () => {
+		  clickme.style.display = 'none';{
+		  
+ 		 cards.style.display = 'flex';
+ 		 for (let i = 1; i <= 60; i++) {
+ 			   let card = document.createElement('div');
+ 				   card.classList.add('card');
+ 					   card.textContent = i;
+			    card.addEventListener('click', () => {
+			      heading.textContent = `Cards play: ${i}`;
+		    });
+		    cards.appendChild(card);
+ 		 }
+ 		 
+	});
+
+
+</script>
+</html>
+

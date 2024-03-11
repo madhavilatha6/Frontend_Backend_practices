@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>switch bulb</title>
+		<style>
+			body{
+			
+				background-color:orange;
+			}
+			#main{
+				background-color:black;
+				height:500px;
+				width:600px;
+				margin-left:430px;
+				margin-top:130px;
+			
+			}
+		
+			#box{
+				  background-color: gray;
+				height:300px;
+				width:300px;
+				border-radius:200px;
+				margin-left:140px;
+				transform:translateY(100px);
+			}
+			
+
+		
+		
+		</style>
+	</head>
+	<body>
+	
+		<div id="main">
+		<div id="box"><div>
+		
+		</div>
+	
+	
+	</body>
+	<script>
+	let divTag=document.getElementById("box");
+	 divTag.onclick = function() {
+      divTag.style.backgroundColor = "aqua";
+      
+     }
+
+    let catMove = "mousemove"
+     divTag.addEventListener(catMove,function(){
+         divTag.style.backgroundColor = "yellow";
+       
+     })
+	
+	
+	
+	
+	</script>
+</html>
+	

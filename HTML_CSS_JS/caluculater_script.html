@@ -1,0 +1,290 @@
+<!-- <html>
+	<head>
+		<title>calculator</title>
+		<style>
+		
+		body{
+
+			background-color:orange;
+		}
+
+		#aqua{
+			width:380px;
+			background-color:aqua;
+			padding: 10px;
+			margin:auto;
+			margin-top:120px;
+		}
+
+		#main{
+			display:flex;	
+		}
+		
+
+		#aqua1{
+			background-color:white;
+			padding:38px 39px;
+			margin:8px;
+		}
+
+		.aqua2{
+			padding: 30px 35px;
+			margin:7px;
+		}
+
+		.red{
+			background-color:red;
+		}
+
+		.yellow{
+			background-color:yellow;
+		}
+
+		.white{
+			background-color:white;
+		}
+
+		.space{
+			padding:30px 38px;
+		}
+	</style>
+	</head>
+	<body>
+			<div id="aqua">
+				<div id="aqua1"></div>
+				<div id="main">
+						<div class="aqua2 white">1</div>
+						<div class="aqua2 white">2</div>
+						<div class="aqua2 white">3</div>
+						<div class="aqua2 yellow">+</div>
+				</div>
+				<div id="main">
+						<div class="aqua2 white">4</div>
+						<div class="aqua2 white">5</div>
+						<div class="aqua2 white">6</div>
+						<div class="aqua2 yellow space">-</div>
+				</div>
+				<div id="main">
+						<div class="aqua2 white">7</div>
+						<div class="aqua2 white">8</div>
+						<div class="aqua2 white">9</div>
+						<div class="aqua2 yellow space">*</div>
+				</div>
+				<div id="main">
+						<div class="aqua2 red">c</div>
+						<div class="aqua2 white">0</div>
+						<div class="aqua2 white">=</div>
+						<div class="aqua2 yellow space">/</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			<script>
+			 var keys = document.querySelectorAll("#main");
+  			var bag = "";
+
+ 			 for (var i = 0; i < keys.length; i++) {
+   				 keys[i].addEventListener("click", myCalculator);
+ 			 }
+
+ 			 function myCalculator() {
+  			 	 var targetNumber = event.target.innerText;
+
+  			  	if (targetNumber == "c") {
+     					bag = "";
+    			  		document.querySelector("#aqua1").innerText = "";
+   				 } else if (targetNumber == "=") {
+     					 	document.querySelector("#aqua1").innerText = eval(bag);
+     					 	bag= ""
+  				 	} else {
+     				 		bag = bag + targetNumber;
+    			  			document.querySelector("#aqua1").innerText = bag;
+  		  			}
+  			}
+			
+		</script>
+		
+		
+	</body>
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+      body{
+
+			background-color:orange;
+		}
+
+		#aqua{
+			width:380px;
+			background-color:aqua;
+			padding: 10px;
+			margin:auto;
+			margin-top:120px;
+		}
+
+		#main{
+			display:flex;	
+		}
+		
+
+		#aqua1{
+			background-color:white;
+			padding:38px 39px;
+			margin:8px;
+		}
+
+		.aqua2{
+			padding: 30px 35px;
+			margin:7px;
+		}
+
+		.red{
+			background-color:red;
+		}
+
+		.yellow{
+			background-color:yellow;
+		}
+
+		.white{
+			background-color:white;
+		}
+
+		.space{
+			padding:30px 38px;
+		}
+
+    </style>
+</head>
+<body>
+    <div id="aqua">
+        <div id="aqua1"></div>
+        <div id="main">
+            <div class="aqua2 white" id="button1">1</div>
+            <div class="aqua2 white" id="button2">2</div>
+            <div class="aqua2 white" id="button3">3</div>
+            <div class="aqua2 yellow" id="plus">+</div>
+        </div>
+        <div id="main">
+            <div class="aqua2 white" id="button4">4</div>
+            <div class="aqua2 white" id="button5">5</div>
+            <div class="aqua2 white" id="button6">6</div>
+            <div class="aqua2 yellow space" id="minus">-</div>
+        </div>
+        <div id="main">
+            <div class="aqua2 white" id="button7">7</div>
+            <div class="aqua2 white" id="button8">8</div>
+            <div class="aqua2 white" id="button9">9</div>
+            <div class="aqua2 yellow space" id="multiply">*</div>
+        </div>
+        <div id="main">
+            <div class="aqua2 red" id="clear">c</div>
+            <div class="aqua2 white" id="button0">0</div>
+            <div class="aqua2 white" id="equals">=</div>
+            <div class="aqua2 yellow space" id="divide">/</div>
+        </div>
+    </div>
+
+    <script>
+        let displayValue = "";
+        let operator = "";
+        let storedValue = "";
+
+        function updateDisplay() {
+            document.getElementById('aqua1').innerText = displayValue;
+        }
+
+        function appendToDisplay(value) {
+            displayValue += value;
+            updateDisplay();
+        }
+
+        function setOperator(op) {
+            if (storedValue === "") {
+                storedValue = displayValue;
+                displayValue = "";
+            } else {
+                calculateResult();
+            }
+            operator = op;
+        }
+
+        function clearDisplay() {
+            displayValue = "";
+            storedValue = "";
+            operator = "";
+            updateDisplay();
+        }
+
+        function calculateResult() {
+            if (operator === "") {
+                return;
+            }
+
+            const num1 = parseFloat(storedValue);
+            const num2 = parseFloat(displayValue);
+
+            switch (operator) {
+                case '+':
+                    displayValue = (num1 + num2);
+                    break;
+                case '-':
+                    displayValue = (num1 - num2);
+                    break;
+                case '*':
+                    displayValue = (num1 * num2);
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        displayValue = "Error";
+                    } else {
+                        displayValue = (num1 / num2);
+                    }
+                    break;
+            }
+
+            operator = "";
+            storedValue = "";
+            updateDisplay();
+        }
+
+        // Refactor the event listeners using JavaScript
+        document.getElementById('button1').addEventListener('click', () => appendToDisplay('1'));
+        document.getElementById('button2').addEventListener('click', () => appendToDisplay('2'));
+        document.getElementById('button3').addEventListener('click', () => appendToDisplay('3'));
+        document.getElementById('plus').addEventListener('click', () => setOperator('+'));
+        document.getElementById('button4').addEventListener('click', () => appendToDisplay('4'));
+        document.getElementById('button5').addEventListener('click', () => appendToDisplay('5'));
+        document.getElementById('button6').addEventListener('click', () => appendToDisplay('6'));
+        document.getElementById('minus').addEventListener('click', () => setOperator('-'));
+        document.getElementById('button7').addEventListener('click', () => appendToDisplay('7'));
+        document.getElementById('button8').addEventListener('click', () => appendToDisplay('8'));
+        document.getElementById('button9').addEventListener('click', () => appendToDisplay('9'));
+        document.getElementById('multiply').addEventListener('click', () => setOperator('*'));
+        document.getElementById('clear').addEventListener('click', clearDisplay);
+        document.getElementById('button0').addEventListener('click', () => appendToDisplay('0'));
+        document.getElementById('equals').addEventListener('click', calculateResult);
+        document.getElementById('divide').addEventListener('click', () => setOperator('/'));
+    </script>
+</body>
+</html>
+

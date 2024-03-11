@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>form script</title>
+		<style>
+		
+		
+		.inputform{
+  
+			  flex-direction:column;
+			  display:flex;
+			  width:300px;
+  
+		}
+
+		.heading{
+			  margin:10px;
+			  color:brown;
+  
+		}
+		input{
+ 			 margin:5px;
+		}
+		.submit{
+  
+			  background-color:brown;
+			  color:white;
+		}
+
+		
+		</style>
+	</head>
+	<body>
+	
+			<div class="heading">Enter the Details</div>
+				<div class="inputform">
+  					<input class="name" type="text" placeholder="Enter"/>
+ 					 <input class="mobile"  type="number" 	placeholder="Enter your mobile number" />
+ 					 <input class="submit" type="submit" value="create"/>
+				</div>
+				<div class="displaydetails"></div>
+  
+
+
+	
+	
+	
+	
+	
+	</body>
+	<script>
+		var nameTag=document.querySelector(".name");
+		var mobile=document.querySelector(".mobile");
+		var submit=document.querySelector(".submit");
+			submit.onclick=function(){
+				if(mobile.value.length !== 0){
+ 				let userTag=document.createElement("div");
+				 let NameTag=document.createElement("div");
+					  NameTag.textContent="Name: " + (nameTag.value);
+					  NameTag.style.margin="20px";
+  				let mobileTag=document.createElement("div");
+					  mobileTag.textContent="ph.no: " + (mobile.value);
+ 					  mobileTag.style.margin="20px";
+					  userTag.append(NameTag,mobileTag);
+					  userTag.style.backgroundColor="black";
+					   userTag.style.color="white";
+					  userTag.style.margin="20px";		
+	
+
+				let detailTag=document.querySelector(".displaydetails");
+					  detailTag.append(userTag);
+					  detailTag.style.display="flex";
+					  detailTag.style.backgroundColor ="aqua";
+					  detailTag.style.padding="20px";
+					  detailTag.style.margin="20px";
+					  detailTag.style.flexWrap = "wrap";
+					  detailTag.append(userTag);
+				}else{
+					alert('mobile number is empty');
+				}
+					  
+			}
+			const inputElement = document.querySelector(".mobile");
+				
+			    inputElement.addEventListener("input", function() {
+			     
+			      if (this.value.length > 10) {
+			      
+				this.value = this.value.slice(0, 10);
+			      }
+			      	
+			    });
+			    			    
+	
+	
+	</script>
+</html>

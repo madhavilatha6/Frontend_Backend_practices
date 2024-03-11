@@ -1,0 +1,135 @@
+<html>
+	<head>
+			<title>sign up page</title>
+			<style>
+				body{
+					background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+				
+				}
+			
+				#main{
+					flex-direction:column;
+					display:flex;
+					width:400px;
+					background-color:FBF4E9;
+					height:550px;
+					border-radius:26px;
+					margin-top:-150px;
+					
+					
+				}
+				
+				input{
+				
+					margin:5px;
+					margin-left:60px;
+					margin-bottom:20px;
+					height:30px;
+					outline: none;
+					background-color: rgba(0, 0, 0 , 0);
+					border: none;
+					border-bottom: 1px solid lightgray;
+					color:black;
+					width:280px;
+				
+				}
+				.inputform{
+					
+					width:300px;
+					text-align:center;
+					margin-left:38%;
+					margin-top:15%;
+					height:10px;
+					
+				}
+				#button{
+					width:170px;
+					margin-left:110px;
+					height:700px;
+					border-radius:10px;
+					background-color:#a8eb12;
+					border:2px solid #a8eb12;
+					margin-top:15px;
+					
+				
+				}
+				p{
+				 color:black;
+				}
+				a{
+				 color:#a8eb12;
+				}
+				
+				h2{
+					margin-right:190px;
+					font-size:15px;
+				}
+				.email1{
+					margin-left:20px;
+				}
+				.phone1{
+					margin-left:20px;
+				}
+				.flex{
+					display:flex;
+					margin-left:-20px;
+					
+					
+				}
+				.first{
+					margin-left:80px;
+					width:100px;
+					
+				}
+				.last{
+					margin-left:80px;
+					width:100px;
+				
+				}
+				</style>
+	</head>
+	<body>
+		<div class="inputform">
+			
+			<div id="main">
+			<h1>Signup Page</h1>
+			<h2>User Name</h2>
+					
+					<input class="username" type="text" placeholder="username" >
+					<h2 class="email1">Email address</h2>
+					<input class="email" type="email" placeholder="Email" name="email"/>
+					<h2 class="phone1">phone number</h2>
+					<input class="phone" type="number" placeholder="Phone number" pattern="[0-9]{10}"/>
+					<h2>password</h2>
+					<input class="password" type="password" placeholder="password" />
+					<button id="button">Submit</button>	
+					<p>go to page<a href="login_script.html">Login page</a></p>
+			</div>	
+		</div>
+	
+	
+	
+	
+	</body>
+	<script>
+		var button=document.querySelector("#button");
+		
+		button.onclick=function(){
+		let inputElement=document.querySelector(".phone");
+		inputElement.addEventListener("input",function(){
+			if(this.value.length > 10){
+				this.value=this.value.slice(0,10);
+		}
+		});	
+			var username=document.querySelector(".username").value;
+			var email=document.querySelector(".email").value;
+			var phone=document.querySelector(".phone").value;
+			var password=document.querySelector(".password").value;
+			let Data = JSON.parse(localStorage.getItem("Details")) || [];
+			localStorage.setItem("Details",JSON.stringify([...Data,{username,email,phone,password}]))
+			window.location.href="login_script.html";
+			
+		}
+	</script>
+</html>
+

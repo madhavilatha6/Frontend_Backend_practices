@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>Stop watch</title>
+	</head>
+	<style>
+	
+		body{
+			background-image: url(https://free4kwallpapers.com/uploads/originals/2020/08/07/collected-from-internet.-wallpaper_.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+								
+		}
+		
+		#main{
+			border:1px solid white;
+			width:350px;
+			padding:30px;
+			text-align:center;
+			margin-left:500px;
+			margin-top:200px;
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		
+		}
+		button{
+			width:90px;
+			border-radius:50px;
+			height:55px;
+			font-size:20px;
+			margin-top:30px;
+			margin:10px;
+			
+		}
+		#timer{
+			font-size:70px;
+		
+		}
+		.hours{
+			border:2px solid green;
+		}
+		h1{
+			color:white;
+			font-size:40px
+		
+		}
+	
+	
+	
+	</style>
+	<body>
+	<div id="main"> 
+		<h1>Stopwatch</h1>
+		<div id="timer">00:00:00:00</div>
+		<button id="start">Start</button>
+		<button id="stop">Stop</button>
+		<button id="reset">Reset</button>
+	</div>
+	</body>
+	<script>
+		let timer = document.getElementById('timer');
+		let startButton = document.getElementById('start');
+		let stopButton = document.getElementById('stop');
+		let resetButton = document.getElementById('reset');
+		let hours = 0;
+		
+		let minutes = 0;
+		let seconds = 0; 
+		let milli=0;
+		let interval;
+		
+		function startTimer() {
+		  interval = setInterval(function() {
+			milli++;
+			 if(milli == 60){
+			 milli=0;
+			 seconds++;
+			
+		    if (seconds == 60) {
+		      seconds = 0;
+		      minutes++;
+		      if (minutes == 60) {
+			minutes = 0;
+			hours++;
+		      }
+		    }
+		    }
+		    timer.innerHTML = time(hours) + ":" + time(minutes) + ":" + time(seconds)+":"+ time(milli);
+		  }, 10);
+		}
+		
+		function stopTimer() {
+		  clearInterval(interval);
+		 
+		}
+		
+		function resetTimer() {
+		  clearInterval(interval);
+		  hours = 0;
+		  minutes = 0;
+		  seconds = 0;
+		  timer.innerHTML = "00:00:00:00";
+		}
+		
+		
+		function time(num) {
+		  var string = num + "";
+		  if (string < 10) {
+		    return "0" + string;
+		  } else {
+		    return string;
+		  }
+		}
+		
+		
+		
+		startButton.addEventListener('click', startTimer);
+		stopButton.addEventListener('click', stopTimer);
+		resetButton.addEventListener('click', resetTimer);
+	</script>
+</html>

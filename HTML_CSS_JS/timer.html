@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>Live clock</title>
+	</head>
+	<style>
+		
+
+			body{
+				background-image: url(https://free4kwallpapers.com/uploads/originals/2020/08/07/collected-from-internet.-wallpaper_.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				/* background-position: center; */
+			}
+
+			h1{
+			  position: relative;
+			  display: block;
+			  color: white;
+			  text-align: center;
+			font-size: 40px;
+			  
+			  
+			}
+
+
+			 #time{
+			  display: flex;
+				margin-left: 80px;
+				font-size: 60px;
+				color:black;
+			}
+
+		
+			span{
+			  width: 100px;
+			  height:80px;
+			  color:black;
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			}
+			#clock{
+				border: 2px solid white;
+				margin: 200px 500px 100px 500px;
+				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+				padding: 20px 20px 20px 0px;
+			}
+			button{
+			width:90px;
+			border-radius:50px;
+			height:55px;
+			font-size:17px;
+			margin-top:30px;
+			margin:10px;
+			
+		}
+
+	</style>
+	<body>
+		    <div id="clock">
+	   		<h1>Live timer</h1>
+		   		<div id="time">
+					<div><span id="hour">00</span><span><button>Hours</button></span></div>
+					<div><span id="minutes">00</span><span><button>Minutes</button></span></div>
+					<div><span id="seconds">00</span><span><button>Seconds</button></span></div>
+		    		 </div>
+	  	    </div>
+
+	
+	</body>
+	<script>
+	
+	function clock(){
+		  
+		    var hours = document.getElementById('hour');
+		    var minutes = document.getElementById('minutes');
+		    var seconds = document.getElementById('seconds');
+
+		    var h = new Date().getHours();
+		    var m = new Date().getMinutes();
+		    var s = new Date().getSeconds();
+
+		    hours.innerHTML = h;
+		    minutes.innerHTML = m;
+		    seconds.innerHTML = s;
+	 }
+
+		  var interval = setInterval(clock, 1000);
+	
+	
+	
+	</script>
+</html>
